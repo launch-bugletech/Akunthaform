@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Akuntha Projects - RESCO Solar</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Work+Sans:wght@600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#131b2e",
+                        "on-tertiary": "#402d00",
+                        "primary": "#bec6e0",
+                        "surface-tint": "#bec6e0",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-tertiary-container": "#a47a00",
+                        "background": "#101416",
+                        "surface-container-low": "#191c1e",
+                        "on-background": "#e0e3e6",
+                        "tertiary-container": "#211600",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#798098",
+                        "primary-fixed-dim": "#bec6e0",
+                        "inverse-on-surface": "#2d3133",
+                        "on-error-container": "#ffdad6",
+                        "on-surface-variant": "#c6c6cd",
+                        "industrial-red": "#E65644",
+                        "on-primary": "#283044",
+                        "on-surface": "#e0e3e6",
+                        "surface-charcoal": "#1E293B",
+                        "secondary": "#4edea3",
+                        "tertiary": "#f9bd22",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#45464d",
+                        "surface-container-high": "#272a2d",
+                        "surface-container-highest": "#323538",
+                        "tertiary-fixed-dim": "#f9bd22",
+                        "on-secondary-container": "#00311f",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "on-tertiary-fixed": "#261a00",
+                        "inverse-surface": "#e0e3e6",
+                        "surface-variant": "#323538",
+                        "inverse-primary": "#565e74",
+                        "secondary-container": "#00a572",
+                        "primary-container": "#0f172a",
+                        "surface-container-lowest": "#0b0f11",
+                        "on-secondary": "#003824",
+                        "on-secondary-fixed": "#002113",
+                        "primary-fixed": "#dae2fd",
+                        "surface-bright": "#363a3c",
+                        "outline": "#909097",
+                        "surface": "#101416",
+                        "surface-container": "#1d2022",
+                        "surface-dim": "#101416",
+                        "on-secondary-fixed-variant": "#005236",
+                        "tertiary-fixed": "#ffdf9f",
+                        "secondary-fixed": "#6ffbbe",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#4edea3",
+                        "deep-navy": "#000422"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "base": "8px",
+                        "section-gap": "120px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "display-lg": ["Work Sans"],
+                        "headline-md": ["Work Sans"],
+                        "headline-lg-mobile": ["Work Sans"],
+                        "label-sm": ["Inter"],
+                        "headline-lg": ["Work Sans"],
+                        "body-lg": ["Inter"],
+                        "technical-data": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "technical-data": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .grid-overlay {
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .form-radio-card:has(input:checked) {
+            border-color: #4edea3;
+            background-color: rgba(78, 222, 163, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-x-hidden">
+    <!-- Top Navigation (Generated from JSON) -->
+    <nav
+        class="bg-surface dark:bg-surface font-headline-md text-headline-md font-label-md text-label-md border-b border-outline-variant opacity-20 sticky top-0 z-50 w-full transition-colors duration-300">
+        <div class="flex justify-between items-center w-full max-w-container-max mx-auto px-margin-desktop h-20">
+            <div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tight">
+                Akuntha Projects
+            </div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-300"
+                    href="#">About</a>
+                <a class="text-secondary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors duration-300"
+                    href="#">Solutions</a>
+                <a class="text-on-surface-variant font-label-md hover:text-secondary transition-colors duration-300"
+                    href="#">Contact</a>
+            </div>
+            <button
+                class="bg-secondary text-on-secondary px-6 py-2 rounded-DEFAULT font-label-md hover:bg-secondary-fixed-dim transition-colors hidden md:block">
+                Get Assessment
+            </button>
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden text-on-surface-variant">
+                <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+            </button>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="flex-grow relative bg-deep-navy">
+        <!-- Technical Grid Background -->
+        <div class="absolute inset-0 grid-overlay z-0"></div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-12 items-start">
+                <!-- Left Column: Copy & Value Prop -->
+                <div class="lg:col-span-6 flex flex-col gap-8">
+                    <div class="flex flex-col gap-4">
+                        <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Commercial
+                            Solar Without Capital Investment</span>
+                        <h1
+                            class="font-headline-lg-mobile md:font-display-lg text-headline-lg-mobile md:text-display-lg text-on-surface">
+                            Reduce Your Business Electricity Costs Without Investing in a Solar Plant</h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                            Switch to commercial solar through the RESCO model. Akuntha Projects develops, installs,
+                            operates, and maintains the solar system, while eligible businesses purchase solar
+                            electricity under a long-term commercial agreement.
+                        </p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-4 mt-4">
+                        <button
+                            class="bg-secondary text-on-secondary px-8 py-3 rounded-DEFAULT font-label-md font-bold hover:bg-secondary-fixed-dim transition-colors text-center w-full sm:w-auto">
+                            Check My Project Eligibility
+                        </button>
+                        <a class="border border-outline-variant text-on-surface px-8 py-3 rounded-DEFAULT font-label-md text-center hover:border-secondary hover:text-secondary transition-colors w-full sm:w-auto flex items-center justify-center gap-2"
+                            href="#">
+                            See How RESCO Works <span class="material-symbols-outlined text-sm"
+                                style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+                        </a>
+                    </div>
+                    <div class="mt-8 border-t border-outline-variant/30 pt-8">
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-secondary mt-1"
+                                    style="font-variation-settings: 'FILL' 1;">currency_rupee</span>
+                                <span class="font-body-md text-body-md text-on-surface-variant">Zero upfront solar
+                                    investment</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-secondary mt-1"
+                                    style="font-variation-settings: 'FILL' 1;">factory</span>
+                                <span class="font-body-md text-body-md text-on-surface-variant">Designed for commercial
+                                    and industrial facilities</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-secondary mt-1"
+                                    style="font-variation-settings: 'FILL' 1;">engineering</span>
+                                <span class="font-body-md text-body-md text-on-surface-variant">Engineering, EPC and
+                                    O&amp;M support</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="material-symbols-outlined text-secondary mt-1"
+                                    style="font-variation-settings: 'FILL' 1;">solar_power</span>
+                                <span class="font-body-md text-body-md text-on-surface-variant">Rooftop and
+                                    ground-mounted possibilities</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mt-4 p-4 border border-outline-variant/20 bg-surface-container-low/50 rounded-DEFAULT">
+                        <p class="font-label-sm text-label-sm text-on-surface-variant opacity-80 leading-relaxed">
+                            <span class="material-symbols-outlined inline-block align-middle mr-1 text-[16px]"
+                                style="font-variation-settings: 'FILL' 0;">info</span>
+                            Clarification: No solar plant purchase is required. Commercial terms are structured
+                            according to the project, site, electricity consumption, and agreement period.
+                        </p>
+                    </div>
+                </div>
+                <!-- Right Column: Assessment Form Card -->
+                <div class="lg:col-span-6 mt-12 lg:mt-0">
+                    <!-- Glassmorphism/High-end White Card (Light Theme internally to stand out against navy) -->
+                    <div class="bg-[#F4F6F9] text-surface-charcoal rounded-lg border border-outline/20 p-6 md:p-8 relative overflow-hidden shadow-2xl"
+                        style="box-shadow: 0 0 0 0 rgba(15, 23, 42, 0.04), 0 20px 25px -5px rgba(0, 0, 0, 0.3);">
+                        <!-- Subtle technical pattern top edge -->
+                        <div
+                            class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary to-primary opacity-50">
+                        </div>
+                        <div class="absolute top-1 left-0 right-0 h-8 opacity-[0.03] pointer-events-none"
+                            style="background-image: linear-gradient(to right, #1E293B 1px, transparent 1px); background-size: 8px 100%;">
+                        </div>
+                        <!-- Progress Header -->
+                        <div class="flex justify-between items-center mb-6 relative z-10">
+                            <span
+                                class="font-label-sm text-label-sm text-surface-charcoal/60 font-bold tracking-widest">STEP
+                                1 OF 4</span>
+                            <div class="flex gap-1">
+                                <div class="w-8 h-1 bg-secondary rounded-full"></div>
+                                <div class="w-8 h-1 bg-outline/20 rounded-full"></div>
+                                <div class="w-8 h-1 bg-outline/20 rounded-full"></div>
+                                <div class="w-8 h-1 bg-outline/20 rounded-full"></div>
+                            </div>
+                        </div>
+                        <!-- Form Content -->
+                        <div class="relative z-10">
+                            <h2 class="font-headline-md text-headline-md font-bold text-surface-charcoal mb-2">Get a
+                                Free RESCO Project Assessment</h2>
+                            <p class="font-body-md text-body-md text-surface-charcoal/70 mb-8">
+                                Answer a few questions about your facility and electricity use. Our engineering team
+                                will assess whether your site may be suitable for a RESCO project.
+                            </p>
+                            <form class="flex flex-col gap-8">
+                                <!-- Facility Type Selection -->
+                                <div>
+                                    <label
+                                        class="font-label-md text-label-md text-surface-charcoal font-bold block mb-4">What
+                                        type of facility are you evaluating?</label>
+                                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                                        <!-- Radio Cards -->
+                                        <label
+                                            class="form-radio-card cursor-pointer border border-outline/30 rounded-DEFAULT p-3 flex flex-col items-center gap-2 hover:border-secondary transition-colors bg-white group relative">
+                                            <input checked="" class="sr-only" name="facility_type" type="radio"
+                                                value="manufacturing" />
+                                            <span
+                                                class="material-symbols-outlined text-surface-charcoal/60 group-hover:text-secondary transition-colors"
+                                                style="font-variation-settings: 'FILL' 0;">precision_manufacturing</span>
+                                            <span
+                                                class="font-label-sm text-label-sm text-center text-surface-charcoal">Manufacturing</span>
+                                        </label>
+                                        <label
+                                            class="form-radio-card cursor-pointer border border-outline/30 rounded-DEFAULT p-3 flex flex-col items-center gap-2 hover:border-secondary transition-colors bg-white group relative">
+                                            <input class="sr-only" name="facility_type" type="radio" value="factory" />
+                                            <span
+                                                class="material-symbols-outlined text-surface-charcoal/60 group-hover:text-secondary transition-colors"
+                                                style="font-variation-settings: 'FILL' 0;">factory</span>
+                                            <span
+                                                class="font-label-sm text-label-sm text-center text-surface-charcoal">Industrial
+                                                Plant</span>
+                                        </label>
+                                        <label
+                                            class="form-radio-card cursor-pointer border border-outline/30 rounded-DEFAULT p-3 flex flex-col items-center gap-2 hover:border-secondary transition-colors bg-white group relative">
+                                            <input class="sr-only" name="facility_type" type="radio"
+                                                value="warehouse" />
+                                            <span
+                                                class="material-symbols-outlined text-surface-charcoal/60 group-hover:text-secondary transition-colors"
+                                                style="font-variation-settings: 'FILL' 0;">warehouse</span>
+                                            <span
+                                                class="font-label-sm text-label-sm text-center text-surface-charcoal">Warehouse</span>
+                                        </label>
+                                        <label
+                                            class="form-radio-card cursor-pointer border border-outline/30 rounded-DEFAULT p-3 flex flex-col items-center gap-2 hover:border-secondary transition-colors bg-white group relative">
+                                            <input class="sr-only" name="facility_type" type="radio"
+                                                value="cold_storage" />
+                                            <span
+                                                class="material-symbols-outlined text-surface-charcoal/60 group-hover:text-secondary transition-colors"
+                                                style="font-variation-settings: 'FILL' 0;">ac_unit</span>
+                                            <span
+                                                class="font-label-sm text-label-sm text-center text-surface-charcoal">Cold
+                                                Storage</span>
+                                        </label>
+                                        <label
+                                            class="form-radio-card cursor-pointer border border-outline/30 rounded-DEFAULT p-3 flex flex-col items-center gap-2 hover:border-secondary transition-colors bg-white group relative">
+                                            <input class="sr-only" name="facility_type" type="radio"
+                                                value="commercial" />
+                                            <span
+                                                class="material-symbols-outlined text-surface-charcoal/60 group-hover:text-secondary transition-colors"
+                                                style="font-variation-settings: 'FILL' 0;">location_city</span>
+                                            <span
+                                                class="font-label-sm text-label-sm text-center text-surface-charcoal">Commercial
+                                                Bldg</span>
+                                        </label>
+                                        <label
+                                            class="form-radio-card cursor-pointer border border-outline/30 rounded-DEFAULT p-3 flex flex-col items-center gap-2 hover:border-secondary transition-colors bg-white group relative">
+                                            <input class="sr-only" name="facility_type" type="radio" value="other" />
+                                            <span
+                                                class="material-symbols-outlined text-surface-charcoal/60 group-hover:text-secondary transition-colors"
+                                                style="font-variation-settings: 'FILL' 0;">more_horiz</span>
+                                            <span
+                                                class="font-label-sm text-label-sm text-center text-surface-charcoal">Other</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- Location Fields -->
+                                <div>
+                                    <label
+                                        class="font-label-md text-label-md text-surface-charcoal font-bold block mb-4">Location
+                                        Details</label>
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div class="flex flex-col gap-1">
+                                            <label class="font-label-sm text-label-sm text-surface-charcoal/70"
+                                                for="state">State</label>
+                                            <select
+                                                class="border border-outline/30 rounded-DEFAULT px-4 py-3 bg-white text-surface-charcoal focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-shadow font-body-md"
+                                                id="state">
+                                                <option disabled="" selected="" value="">Select State</option>
+                                                <option value="mh">Maharashtra</option>
+                                                <option value="gj">Gujarat</option>
+                                                <option value="tn">Tamil Nadu</option>
+                                            </select>
+                                        </div>
+                                        <div class="flex flex-col gap-1">
+                                            <label class="font-label-sm text-label-sm text-surface-charcoal/70"
+                                                for="city">City</label>
+                                            <input
+                                                class="border border-outline/30 rounded-DEFAULT px-4 py-3 bg-white text-surface-charcoal focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-shadow font-body-md placeholder:text-outline"
+                                                id="city" placeholder="e.g. Pune" type="text" />
+                                        </div>
+                                        <div class="flex flex-col gap-1 sm:col-span-2">
+                                            <label class="font-label-sm text-label-sm text-surface-charcoal/70"
+                                                for="pincode">Pincode</label>
+                                            <input
+                                                class="border border-outline/30 rounded-DEFAULT px-4 py-3 bg-white text-surface-charcoal focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-shadow font-body-md placeholder:text-outline"
+                                                id="pincode" placeholder="6-digit pincode" type="text" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- CTA -->
+                                <button
+                                    class="mt-4 bg-[#1E293B] text-white px-6 py-4 rounded-DEFAULT font-label-md font-bold hover:bg-opacity-90 transition-all flex justify-between items-center group shadow-lg"
+                                    type="button">
+                                    <span>Continue to Electricity Usage</span>
+                                    <span
+                                        class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+                                        style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Footer (Generated from JSON) -->
+    <footer
+        class="bg-surface-container-lowest dark:bg-surface-container-lowest text-on-surface-variant font-body-md text-body-md font-label-sm text-label-sm border-t border-outline-variant opacity-100">
+        <div
+            class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-desktop py-section-gap">
+            <div class="col-span-1 md:col-span-1">
+                <div class="font-headline-md text-headline-md font-bold text-on-surface mb-4">
+                    Akuntha Projects
+                </div>
+                <p class="text-sm">© 2026 Akuntha Projects. Engineering sustainable industrial infrastructure.</p>
+            </div>
+            <div class="col-span-1 md:col-span-3 flex flex-wrap gap-8 justify-start md:justify-end">
+                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Privacy
+                    Policy</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Terms of
+                    Service</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Case
+                    Studies</a>
+                <a class="text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Resource
+                    Center</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
