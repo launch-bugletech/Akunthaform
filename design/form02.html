@@ -380,7 +380,479 @@
             background: linear-gradient(to right, rgba(39, 44, 104, 0.95), rgba(39, 44, 104, 0.8))
         }
     </style>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "surface": "#faf8ff",
+                    "surface-dim": "#d7d9e9",
+                    "surface-bright": "#faf8ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f2f3ff",
+                    "surface-container": "#eceeff",
+                    "surface-container-high": "#e6e8ff",
+                    "surface-container-highest": "#e0e3fb",
+                    "on-surface": "#181a2c",
+                    "on-surface-variant": "#444659",
+                    "outline": "#75768a",
+                    "outline-variant": "#c5c5db",
+                    "inverse-surface": "#2d2f41",
+                    "inverse-on-surface": "#eff0ff",
+                    "primary": "#48539c",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#dfe0ff",
+                    "on-primary-container": "#000b62",
+                    "secondary": "#5b5d72",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#e0e1f9",
+                    "on-secondary-container": "#181a2c",
+                    "tertiary": "#77536d",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#ffd7f1",
+                    "on-tertiary-container": "#2d1228",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#410002",
+                    "background": "#faf8ff",
+                    "on-background": "#181a2c",
+                    "surface-tint": "#48539c",
+                    "primary-fixed": "#dfe0ff",
+                    "on-primary-fixed": "#000b62",
+                    "primary-fixed-dim": "#bpc2ff",
+                    "on-primary-fixed-variant": "#2f3b83",
+                    "secondary-fixed": "#e0e1f9",
+                    "on-secondary-fixed": "#181a2c",
+                    "secondary-fixed-dim": "#c3c5dd",
+                    "on-secondary-fixed-variant": "#434659",
+                    "tertiary-fixed": "#ffd7f1",
+                    "on-tertiary-fixed": "#2d1228",
+                    "tertiary-fixed-dim": "#e6b8d8",
+                    "on-tertiary-fixed-variant": "#5d3c55",
+                    "inverse-primary": "#bdc2ff"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.0rem",
+                    "none": "0.0rem",
+                    "sm": "0.0rem",
+                    "md": "0.0rem",
+                    "lg": "0.0rem",
+                    "xl": "0.0rem",
+                    "2xl": "0.0rem",
+                    "3xl": "0.0rem",
+                    "full": "0.0rem"
+                },
+                "spacing": {
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "section-gap": "120px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px"
+                },
+                "fontFamily": {
+                    "body-md": [
+                        "Inter"
+                    ],
+                    "label-md": [
+                        "Inter"
+                    ],
+                    "display-lg": [
+                        "Work Sans"
+                    ],
+                    "headline-md": [
+                        "Work Sans"
+                    ],
+                    "headline-lg-mobile": [
+                        "Work Sans"
+                    ],
+                    "label-sm": [
+                        "Inter"
+                    ],
+                    "headline-lg": [
+                        "Work Sans"
+                    ],
+                    "body-lg": [
+                        "Inter"
+                    ],
+                    "technical-data": [
+                        "Inter"
+                    ]
+                },
+                "fontSize": {
+                    "body-md": [
+                        "16px",
+                        {
+                            "lineHeight": "24px",
+                            "fontWeight": "400"
+                        }
+                    ],
+                    "label-md": [
+                        "14px",
+                        {
+                            "lineHeight": "20px",
+                            "letterSpacing": "0.01em",
+                            "fontWeight": "500"
+                        }
+                    ],
+                    "display-lg": [
+                        "48px",
+                        {
+                            "lineHeight": "56px",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }
+                    ],
+                    "headline-md": [
+                        "24px",
+                        {
+                            "lineHeight": "32px",
+                            "fontWeight": "600"
+                        }
+                    ],
+                    "headline-lg-mobile": [
+                        "28px",
+                        {
+                            "lineHeight": "34px",
+                            "fontWeight": "600"
+                        }
+                    ],
+                    "label-sm": [
+                        "12px",
+                        {
+                            "lineHeight": "16px",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "600"
+                        }
+                    ],
+                    "headline-lg": [
+                        "32px",
+                        {
+                            "lineHeight": "40px",
+                            "letterSpacing": "-0.01em",
+                            "fontWeight": "600"
+                        }
+                    ],
+                    "body-lg": [
+                        "18px",
+                        {
+                            "lineHeight": "28px",
+                            "fontWeight": "400"
+                        }
+                    ],
+                    "technical-data": [
+                        "14px",
+                        {
+                            "lineHeight": "20px",
+                            "fontWeight": "400"
+                        }
+                    ]
+                }
+            },
+        },
+    }
+</script>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+    }
+</style>
+<style>
+    .material-symbols-outlined {
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 300,
+            'GRAD' 0,
+            'opsz' 24
+    }
+</style>
+<script id="tailwind-config">
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                "colors": {
+                    "surface-dim": "#d7d9e9",
+                    "background": "#faf8ff",
+                    "on-error-container": "#410002",
+                    "industrial-red": "#E65644",
+                    "primary-fixed-dim": "#bac3ff",
+                    "primary-fixed": "#dfe0ff",
+                    "surface-tint": "#475399",
+                    "surface": "#faf8ff",
+                    "surface-container-highest": "#e1e2f3",
+                    "primary-container": "#272c68",
+                    "inverse-primary": "#bac3ff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#fbd8ff",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#5a3a69",
+                    "secondary-fixed": "#e0e0ff",
+                    "primary": "#475399",
+                    "surface-container-high": "#e7e7f8",
+                    "inverse-on-surface": "#f0efff",
+                    "surface-charcoal": "#1E293B",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "deep-navy": "#1e2254",
+                    "on-primary-fixed": "#000865",
+                    "surface-bright": "#faf8ff",
+                    "on-secondary-fixed": "#161537",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#e8b3f7",
+                    "inverse-surface": "#2e303f",
+                    "secondary": "#5a5d89",
+                    "secondary-fixed-dim": "#c3c3eb",
+                    "outline": "#767680",
+                    "on-tertiary-fixed": "#2c003f",
+                    "tertiary-container": "#e8b3f7",
+                    "surface-container": "#ecedfd",
+                    "on-secondary-fixed-variant": "#42456f",
+                    "on-secondary-container": "#484a75",
+                    "on-primary-fixed-variant": "#2e3b7f",
+                    "secondary-container": "#42456f",
+                    "tertiary": "#735182",
+                    "surface-variant": "#e2e1ec",
+                    "surface-container-low": "#f2f3ff",
+                    "on-primary-container": "#cfd3ff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#191a27",
+                    "on-primary": "#ffffff",
+                    "on-surface-variant": "#45464f",
+                    "on-tertiary-container": "#553564",
+                    "outline-variant": "#c6c5d0",
+                    "on-background": "#191a27"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+                },
+                "spacing": {
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "section-gap": "120px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px"
+                },
+                "fontFamily": {
+                    "body-md": [
+                        "Inter"
+                    ],
+                    "label-md": [
+                        "Inter"
+                    ],
+                    "display-lg": [
+                        "Work Sans"
+                    ],
+                    "headline-md": [
+                        "Work Sans"
+                    ],
+                    "headline-lg-mobile": [
+                        "Work Sans"
+                    ],
+                    "label-sm": [
+                        "Inter"
+                    ],
+                    "headline-lg": [
+                        "Work Sans"
+                    ],
+                    "body-lg": [
+                        "Inter"
+                    ],
+                    "technical-data": [
+                        "Inter"
+                    ]
+                },
+                "fontSize": {
+                    "body-md": [
+                        "16px",
+                        {
+                            "lineHeight": "24px",
+                            "fontWeight": "400"
+                        }
+                    ],
+                    "label-md": [
+                        "14px",
+                        {
+                            "lineHeight": "20px",
+                            "letterSpacing": "0.01em",
+                            "fontWeight": "500"
+                        }
+                    ],
+                    "display-lg": [
+                        "48px",
+                        {
+                            "lineHeight": "56px",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }
+                    ],
+                    "headline-md": [
+                        "24px",
+                        {
+                            "lineHeight": "32px",
+                            "fontWeight": "600"
+                        }
+                    ],
+                    "headline-lg-mobile": [
+                        "28px",
+                        {
+                            "lineHeight": "34px",
+                            "fontWeight": "600"
+                        }
+                    ],
+                    "label-sm": [
+                        "12px",
+                        {
+                            "lineHeight": "16px",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "600"
+                        }
+                    ],
+                    "headline-lg": [
+                        "32px",
+                        {
+                            "lineHeight": "40px",
+                            "letterSpacing": "-0.01em",
+                            "fontWeight": "600"
+                        }
+                    ],
+                    "body-lg": [
+                        "18px",
+                        {
+                            "lineHeight": "28px",
+                            "fontWeight": "400"
+                        }
+                    ],
+                    "technical-data": [
+                        "14px",
+                        {
+                            "lineHeight": "20px",
+                            "fontWeight": "400"
+                        }
+                    ]
+                }
+            },
+        },
+    }
+</script>
+<style>
+    .grid-bg {
+        background-size: 40px 40px;
+        background-image:
+            linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    }
 
+    .technical-border {
+        border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .accent-line {
+        width: 48px;
+        height: 4px;
+        background-color: #f9bd22;
+        /* Solar Yellow */
+        margin-bottom: 16px;
+    }
+</style>
+<script id="tailwind-config">
+    tailwind.config = {
+        theme: {
+            extend: {
+                "colors": {
+                    "surface": "#faf8ff",
+                    "surface-dim": "#d7d9e9",
+                    "surface-bright": "#faf8ff",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f2f3ff",
+                    "surface-container": "#eceeff",
+                    "surface-container-high": "#e6e8fc",
+                    "surface-container-highest": "#e0e2f6",
+                    "on-surface": "#191a20",
+                    "on-surface-variant": "#44464f",
+                    "outline": "#757781",
+                    "outline-variant": "#c5c6d0",
+                    "primary": "#4e56a9",
+                    "on-primary": "#ffffff",
+                    "primary-container": "#e0e0ff",
+                    "on-primary-container": "#030a63",
+                    "secondary": "#5c5d72",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#e1e0f9",
+                    "on-secondary-container": "#181a2c",
+                    "tertiary": "#d1a300",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#ffe085",
+                    "on-tertiary-container": "#403000",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#410002"
+                },
+                "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "none": "0",
+                    "sm": "0.125rem",
+                    "md": "0.375rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+                },
+                "spacing": {
+                    "margin-desktop": "64px",
+                    "base": "8px",
+                    "section-gap": "120px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px"
+                },
+                "fontFamily": {
+                    "body-md": ["Work Sans", "sans-serif"],
+                    "label-md": ["Work Sans", "sans-serif"],
+                    "display-lg": ["Work Sans", "sans-serif"],
+                    "headline-md": ["Work Sans", "sans-serif"],
+                    "headline-lg-mobile": ["Work Sans", "sans-serif"],
+                    "label-sm": ["Work Sans", "sans-serif"],
+                    "headline-lg": ["Work Sans", "sans-serif"],
+                    "body-lg": ["Work Sans", "sans-serif"],
+                    "technical-data": ["Work Sans", "sans-serif"]
+                },
+                "fontSize": {
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+                    "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                    "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "700" }],
+                    "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                    "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "technical-data": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                }
+            }
+        }
+    }
+</script>
+<style>
+    .faq-row {
+        border-bottom: 1px solid theme('colors.outline-variant');
+    }
+
+    .faq-row:last-child {
+        border-bottom: none;
+    }
+</style>
 </head>
 
 <body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-x-hidden">
@@ -827,24 +1299,677 @@
             </div>
         </div>
     </section>
-    <!-- Footer -->
-    <footer
-        class="bg-[#1E2254] text-white/80 font-body-md text-body-md font-label-sm text-label-sm border-t border-outline-variant/10">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto px-margin-desktop py-12">
-            <div class="col-span-1 md:col-span-1">
-                <div class="font-headline-md text-headline-md font-bold text-white mb-4">
-                    Akuntha Projects
+<!-- Section 6: Process -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+    <div class="mb-16">
+        <h2
+            class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 uppercase tracking-wide border-l-4 border-tertiary pl-4">
+            Our Structured Execution Process</h2>
+        <p class="font-body-lg text-body-lg text-on-surface max-w-3xl">A rigorous, multi-stage engineering workflow
+            designed to mitigate risk and ensure high-yield commercial solar deployment.</p>
+    </div>
+    <div class="relative">
+        <div class="space-y-12 relative">
+            <!-- Step 1 -->
+            <div
+                class="flex flex-col md:flex-row items-start border border-outline-variant p-6 bg-surface-container group">
+                <div
+                    class="md:w-16 flex-shrink-0 mb-4 md:mb-0 md:mr-8 border-b-2 md:border-b-0 md:border-r-2 border-tertiary pb-2 md:pb-0 md:pr-4 flex items-center justify-center">
+                    <span
+                        class="font-display-lg text-display-lg text-primary opacity-50 group-hover:opacity-100 transition-opacity">01</span>
                 </div>
-                <p class="text-sm">© 2024 Akuntha Projects. Engineering sustainable industrial infrastructure.</p>
+                <div class="flex-grow">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">Submit Assessment</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Provide initial energy consumption
+                        profiles and facility coordinate data for preliminary modeling.</p>
+                </div>
             </div>
-            <div class="col-span-1 md:col-span-3 flex flex-wrap gap-8 justify-start md:justify-end items-end">
-                <a class="hover:text-white transition-colors duration-200" href="#">Privacy Policy</a>
-                <a class="hover:text-white transition-colors duration-200" href="#">Terms of Service</a>
-                <a class="hover:text-white transition-colors duration-200" href="#">Case Studies</a>
-                <a class="hover:text-white transition-colors duration-200" href="#">Resource Center</a>
+            <!-- Step 2 -->
+            <div
+                class="flex flex-col md:flex-row items-start border border-outline-variant p-6 bg-surface-container group">
+                <div
+                    class="md:w-16 flex-shrink-0 mb-4 md:mb-0 md:mr-8 border-b-2 md:border-b-0 md:border-r-2 border-tertiary pb-2 md:pb-0 md:pr-4 flex items-center justify-center">
+                    <span
+                        class="font-display-lg text-display-lg text-primary opacity-50 group-hover:opacity-100 transition-opacity">02</span>
+                </div>
+                <div class="flex-grow">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">Initial Review</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Engineering teams evaluate baseline
+                        feasibility, shading constraints, and grid interconnection viability.</p>
+                </div>
+            </div>
+            <!-- Step 3 -->
+            <div
+                class="flex flex-col md:flex-row items-start border border-outline-variant p-6 bg-surface-container group">
+                <div
+                    class="md:w-16 flex-shrink-0 mb-4 md:mb-0 md:mr-8 border-b-2 md:border-b-0 md:border-r-2 border-tertiary pb-2 md:pb-0 md:pr-4 flex items-center justify-center">
+                    <span
+                        class="font-display-lg text-display-lg text-primary opacity-50 group-hover:opacity-100 transition-opacity">03</span>
+                </div>
+                <div class="flex-grow">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">Site &amp; Technical Assessment</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">On-site structural audits, electrical
+                        load analysis, and precise layout engineering.</p>
+                </div>
+            </div>
+            <!-- Step 4 -->
+            <div
+                class="flex flex-col md:flex-row items-start border border-outline-variant p-6 bg-surface-container group">
+                <div
+                    class="md:w-16 flex-shrink-0 mb-4 md:mb-0 md:mr-8 border-b-2 md:border-b-0 md:border-r-2 border-tertiary pb-2 md:pb-0 md:pr-4 flex items-center justify-center">
+                    <span
+                        class="font-display-lg text-display-lg text-primary opacity-50 group-hover:opacity-100 transition-opacity">04</span>
+                </div>
+                <div class="flex-grow">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">Commercial Proposal</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Detailed financial modeling, ROI
+                        projections, PPA terms, and lifecycle cost analysis delivery.</p>
+                </div>
+            </div>
+            <!-- Step 5 -->
+            <div
+                class="flex flex-col md:flex-row items-start border border-outline-variant p-6 bg-surface-container group">
+                <div
+                    class="md:w-16 flex-shrink-0 mb-4 md:mb-0 md:mr-8 border-b-2 md:border-b-0 md:border-r-2 border-tertiary pb-2 md:pb-0 md:pr-4 flex items-center justify-center">
+                    <span
+                        class="font-display-lg text-display-lg text-primary opacity-50 group-hover:opacity-100 transition-opacity">05</span>
+                </div>
+                <div class="flex-grow">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">Engineering &amp; Installation</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Procurement of Tier-1 components and
+                        execution by certified installation crews under strict QA protocols.</p>
+                </div>
+            </div>
+            <!-- Step 6 -->
+            <div
+                class="flex flex-col md:flex-row items-start border border-outline-variant p-6 bg-surface-container group">
+                <div
+                    class="md:w-16 flex-shrink-0 mb-4 md:mb-0 md:mr-8 border-b-2 md:border-b-0 md:border-r-2 border-tertiary pb-2 md:pb-0 md:pr-4 flex items-center justify-center">
+                    <span
+                        class="font-display-lg text-display-lg text-primary opacity-50 group-hover:opacity-100 transition-opacity">06</span>
+                </div>
+                <div class="flex-grow">
+                    <h3 class="font-headline-md text-headline-md text-primary mb-2">Operations &amp; Maintenance</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant">Continuous telemetry monitoring,
+                        preventive maintenance, and performance optimization guarantees.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section 7: Why Choose Akuntha -->
+<section class="bg-surface-container-low py-section-gap relative border-y border-outline-variant">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16">
+            <div class="lg:w-2/3">
+                <h2
+                    class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 uppercase tracking-wide border-l-4 border-tertiary pl-4">
+                    Engineering Capability Behind Every RESCO Project</h2>
+                <p class="font-body-lg text-body-lg text-on-surface">Delivering utility-grade reliability to commercial
+                    and industrial facilities through relentless technical precision.</p>
+            </div>
+            <div class="mt-8 lg:mt-0 flex gap-4 lg:justify-end">
+                <div class="text-right">
+                    <div class="font-display-lg text-display-lg text-primary">10+</div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Years Exp
+                    </div>
+                </div>
+                <div class="w-px bg-outline-variant h-16"></div>
+                <div class="text-right">
+                    <div class="font-display-lg text-display-lg text-primary">500+</div>
+                    <div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">MW Managed
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+            <!-- Card 1 -->
+            <div class="relative overflow-hidden border border-outline-variant group aspect-[3/4]">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDF7ZJhzL30XI5AUWGnXKSlW8f9OjkrBmSrVsbt1LcQnW146xqwPhI5NYICBleFhsFutjHAZHUnvByO7nNoFkN9zLUNR950DA80YDYoNq2zVXSnweIkpRfgtFsKpX4tUdlUhoZCeaLGIXFNl1IqhVcR7c7tAYdAtWbnHfqgpB1bU1ZllmH1zcj2b6AVpdonv0g14d3lrGuEhTo2DPQIBuDjKsMzEKQCE_4Mj9IWm-zjkAlF9baHxTxGV2zQylH_Zu7i4A4-Jgdl1GGG');">
+                </div>
+                <div class="absolute inset-0 bg-primary/80 group-hover:bg-primary/90 transition-colors"></div>
+                <div class="absolute inset-0 p-6 flex flex-col justify-end text-on-primary">
+                    <h3 class="font-headline-md text-headline-md mb-3 text-lg border-b border-on-primary/30 pb-2">
+                        Electrical Infrastructure Experience</h3>
+                    <p class="font-body-md text-body-md text-sm">Deep expertise in complex facility integration,
+                        switchgear upgrades, and high-voltage interconnects.</p>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="relative overflow-hidden border border-outline-variant group aspect-[3/4]">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDR3rxKpY4gG8Cdor0G2YOh--RzLa5HpcSRDVcRRJ6-yxB9SL3OirgM4VI5rG_O242l3-vTraJPnLMlON5deKWiWhyFFxOuLAiO3Doigw-zdbY5f9yFkh3IKB-rcWPcPG09zt_xEolYe7G6P09KZR5hD0Bniy6cjn0B66Wis8fiwFEB6BMuAnylE-Pf3Cm7wmtP6cw66pJCbwmoPiXTvEOI5d-NPXwHJs12Fpw5GZW1GudsaWdQWsAhTuCxf89OeOcLyf-dCrASBzs1');">
+                </div>
+                <div class="absolute inset-0 bg-primary/80 group-hover:bg-primary/90 transition-colors"></div>
+                <div class="absolute inset-0 p-6 flex flex-col justify-end text-on-primary">
+                    <h3 class="font-headline-md text-headline-md mb-3 text-lg border-b border-on-primary/30 pb-2">EPC
+                        and O&amp;M Delivery</h3>
+                    <p class="font-body-md text-body-md text-sm">In-house engineering, procurement, construction, backed
+                        by long-term operations and maintenance guarantees.</p>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="relative overflow-hidden border border-outline-variant group aspect-[3/4]">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnrJ3LMQX3FgpM_Es6g8GCxCqGcqr3Q5u-MtIx2Zi5h6cgZO-ztXLxtaM-aGjxKJS-hCygJqORr303nN2EleRz4XRPG2vk-O137zeVmsIAlNobZ2KuJ8W6UDI3d_f09XdBsTtbaB2BTT0m8nO6WoUbY1Wamcz0f-1iXmchZzr67v4R4AKDCrPkXLV_XuMcIK2fIDNyv1bRAVVXfSqtmtV8nkMEvvGxc8PGiyrQOW_N0-K6WISiqVOQpOHr7pwbrh-yLBKNz8Y-LxeR');">
+                </div>
+                <div class="absolute inset-0 bg-primary/80 group-hover:bg-primary/90 transition-colors"></div>
+                <div class="absolute inset-0 p-6 flex flex-col justify-end text-on-primary">
+                    <h3 class="font-headline-md text-headline-md mb-3 text-lg border-b border-on-primary/30 pb-2">
+                        Commercial &amp; Industrial Focus</h3>
+                    <p class="font-body-md text-body-md text-sm">Purpose-built solutions designed specifically for
+                        high-load industrial environments and commercial roofscapes.</p>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="relative overflow-hidden border border-outline-variant group aspect-[3/4]">
+                <div class="absolute inset-0 bg-cover bg-center"
+                    style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDocQizlTBUAtEPU60La_1lIkpMdf89pTg_Rs97omprfcc6c-Kl_NueAJB3tNPW9YHKGVIfk0Lv8zojEh-IPx3Dyz0b5YHbypPKqycqrCQXwOzSMpwn-h_h5PJ5mbGlQOorrBnPm0WPrLQawitqxIGvCwUdk2oauf8qE24hTWQlOy1yFTzwVbiWlXN9AqooLTtVZNSHX6NnFQfqmDHwX9vxFtE0KQvqB-nUzNK9v10et1tzmkoBlXu-htp7KFXe8QvvYdhKTLVqr8ur');">
+                </div>
+                <div class="absolute inset-0 bg-primary/80 group-hover:bg-primary/90 transition-colors"></div>
+                <div class="absolute inset-0 p-6 flex flex-col justify-end text-on-primary">
+                    <h3 class="font-headline-md text-headline-md mb-3 text-lg border-b border-on-primary/30 pb-2">
+                        End-to-End Coordination</h3>
+                    <p class="font-body-md text-body-md text-sm">Seamless management from initial grid studies and
+                        permitting through to final commissioning and telemetry setup.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section 8: Industries Served -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+    <div class="mb-12 text-center md:text-left">
+        <h2
+            class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-4 uppercase tracking-wide border-l-4 border-tertiary pl-4 inline-block">
+            Tailored Solar Solutions for Industrial Facilities</h2>
+        <p class="font-body-lg text-body-lg text-on-surface max-w-2xl mt-4">Optimized generation architectures mapped to
+            specific sector consumption profiles.</p>
+    </div>
+    <!-- Bento Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+        <!-- Manufacturing -->
+        <div class="relative group overflow-hidden border border-outline-variant bg-surface-container h-[300px]">
+            <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-50 transition-opacity duration-500 grayscale"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEmqhhQqyN_4wWcM1sHf6IfpDzDiSGb_6TCEuIzNEppu14P-w0_WwaXNxDNusDtbaf1__6giFqt0Zpin5BTarvLOC5eyPPb57-K9WJEMQWTFnIH3xQdJbBrmsYey0-4fxwN28NtNDbcO3kXYB30MMqiQl_fiS06fAgMXVFK_uxuE70b0je35YH1mHUK3woj3xc8P03yF3V6o6bzYqlcT0gBL-qHocqdZJE232ojvov_tO71jkAGr9RKWQpEn_uQkTUqP4fI7nj6uQx')">
+            </div>
+            <div class="absolute inset-0 bg-primary/70"></div>
+            <div class="absolute bottom-0 left-0 p-6 w-full text-on-primary">
+                <h3 class="font-headline-md text-headline-md mb-2 border-b border-on-primary/30 pb-2">Manufacturing</h3>
+                <p class="font-body-md text-body-md max-w-md">Offset heavy baseline power draw from continuous
+                    production lines with high-capacity roof-mounted arrays.</p>
+            </div>
+        </div>
+        <!-- Cold Storage -->
+        <div class="relative group overflow-hidden border border-outline-variant bg-surface-container h-[300px]">
+            <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-50 transition-opacity duration-500 grayscale"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYrahXKDGb9EGDvXcQLP3Snn5CPM7DpYp8lf9IQoLzDe4g8zCXV_zJdtVi6teBwjjSKcPKxyU9YxRvj02Odu0pMOqLM8rkQPdd6GXSGKFP8gNdLHEpn6p34BWPHBaFotBj-7I3wawZqUbDwMY22sxciietWYhBNOic5NwJbD3QYd_AZcS-cvT34tugK1Xz2YfT14szVDR7vT5Ad5ixWJx4wTyw4fISKpuRKdd7FLbb0ygWn7tli-kM9PkoTqpPY29HFxrpvK285-lC');">
+            </div>
+            <div class="absolute inset-0 bg-primary/70"></div>
+            <div class="absolute bottom-0 left-0 p-6 z-10 text-on-primary">
+                <h3 class="font-headline-md text-headline-md mb-2 border-b border-on-primary/30 pb-2">Cold Storage</h3>
+                <p class="font-body-md text-body-md">Consistent daytime refrigeration loads perfectly match solar
+                    generation curves.</p>
+            </div>
+        </div>
+        <!-- Warehouses -->
+        <div class="relative group overflow-hidden border border-outline-variant bg-surface-container h-[300px]">
+            <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-50 transition-opacity duration-500 grayscale"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7e2hvexjqBQjdliU7vzDCi7fjzR6j5V0fUl_j9NHFA_hWtugasoV8jgdifrpAjQd4K3RTx_ODafyFFGiPAJXwvHDhsKKI4CaQAbB08xOLvlrChuGHqLyEC-jk-dmD4RlFH7hzAs8eeYybRgxQdnZcix7N0-O5YQJr4bTsFG5jivpBq0sU8b3KJ0RVnzan4P34xErp52Wkw9_WtwxVgEIIuXi6Vm3KKZ4rkD9Ik9VDUY2ffrsVvjPkh2BR95EfZDyThImv58HlvAtG')">
+            </div>
+            <div class="absolute inset-0 bg-primary/70"></div>
+            <div class="absolute bottom-0 left-0 p-6 z-10 text-on-primary">
+                <h3 class="font-headline-md text-headline-md mb-2 border-b border-on-primary/30 pb-2">Warehouses</h3>
+                <p class="font-body-md text-body-md">Monetize massive unused roof space to power localized operations.
+                </p>
+            </div>
+        </div>
+        <!-- Hospitals -->
+        <div class="relative group overflow-hidden border border-outline-variant bg-surface-container h-[300px]">
+            <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-50 transition-opacity duration-500 grayscale"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCUIkvfjHft40KprjdqzUYd1ZSfwfdYqyVBkSdvJY2x5m83z3DVthW-Eqis7QDBIrSh1St_En-YSNKp4v1kmG5z_tzDbnfRnjlr6N9oucx3XfxiTYbYW22QqY4UBd0FkldoIfPwINiTUvC5KtfrkxP2Ytz5JZLykt4si03D-voGZorSuCpQAo1CK8hFEyWJ_oM3GP0WomIRXiijcd2wzv1uikU8dF80SZh0UOwyGzPYBTDKZt5xDbVWH6kDcmg6g_mfkXWykpcb0UyO');">
+            </div>
+            <div class="absolute inset-0 bg-primary/70"></div>
+            <div class="absolute bottom-0 left-0 p-6 z-10 text-on-primary">
+                <h3 class="font-headline-md text-headline-md mb-2 border-b border-on-primary/30 pb-2">Hospitals</h3>
+                <p class="font-body-md text-body-md">Enhance energy resilience for critical care infrastructure.</p>
+            </div>
+        </div>
+        <!-- Commercial -->
+        <div class="relative group overflow-hidden border border-outline-variant bg-surface-container h-[300px]">
+            <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-50 transition-opacity duration-500 grayscale"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCTyygnhGakFou4sUTJ-1DGwCwpztmMRRrPxIbJE19RsZwzpBSBIOvzDMwJIfdwnDnqFsBM5kDEeKTMjggNUPvE_SIo-N8wkw1EWQfguNxaT42VhxV33_W702mz9fu1ofrmI8zJ5oBZmkNd2m0cQXYCbMCc22h_beXf5BgoLynBUrFUnAt8VqnA0JU-UWrWiG03IEQBG4owwVLpAflz-1ZOpIiKif5UjMs0KKr-CnxKfThzx_S4X8ciLmyLKvDUdq3Y3Txv03LsifO')">
+            </div>
+            <div class="absolute inset-0 bg-primary/70"></div>
+            <div class="absolute bottom-0 left-0 p-6 z-10 w-full text-on-primary">
+                <h3 class="font-headline-md text-headline-md mb-2 border-b border-on-primary/30 pb-2">Commercial Office
+                    Parks</h3>
+                <p class="font-body-md text-body-md text-sm">Reduce OPEX and achieve ESG targets across sprawling
+                    corporate campuses.</p>
+            </div>
+        </div>
+        <!-- Education -->
+        <div class="relative group overflow-hidden border border-outline-variant bg-surface-container h-[300px]">
+            <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-50 transition-opacity duration-500 grayscale"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4UY9z-E9VjbHrAg516iKy1EsprdfXJ_wtKWZ7bJ8RiZbi9cTJAj8kR3RYRYb2nrdF3VyHtCbx8GRcsOazspGSgXZ6oVOr-IdrPxI7cB6MTdGfsq0NMOxPKIfX-A8CebGZLPpEunMUXQhpvpLBzNdJ1bpSAjT8eKDKR4rbUhsHFPHLkPexVhPrLMsGuAQjbBSdol-Lvv9CpovVDtHLjHWcDhHbkO41LmD55BkddCuNwAipEjKNLLzrWauTbp08UDiUTYOCZZluJ5Ur');">
+            </div>
+            <div class="absolute inset-0 bg-primary/70"></div>
+            <div class="absolute bottom-0 left-0 p-6 z-10 text-on-primary">
+                <h3 class="font-headline-md text-headline-md mb-2 border-b border-on-primary/30 pb-2">Education</h3>
+                <p class="font-body-md text-body-md">Lock in long-term energy costs for large campus networks.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section 4: Key RESCO Benefits -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden bg-background">
+    <!-- Global Grid Overlay -->
+    <div class="absolute inset-0 grid-bg pointer-events-none z-0"></div>
+    <div class="max-w-container-max mx-auto relative z-10">
+        <div class="mb-16">
+            <div class="accent-line"></div>
+            <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Key Benefits of the RESCO Model</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">A strategic approach to solar
+                integration designed for industrial and commercial facilities, minimizing initial capital outlay while
+                maximizing operational efficiency.</p>
+        </div>
+        <!-- 2x3 Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+            <!-- Card 1 -->
+            <div
+                class="bg-surface-container-lowest border border-outline-variant rounded p-8 hover:bg-surface-container-low transition-colors shadow-sm">
+                <div class="w-12 h-12 flex items-center justify-center mb-6 text-[#f9bd22]">
+                    <span class="material-symbols-outlined text-4xl" data-icon="payments">payments</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Zero Upfront Investment</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">Preserve capital for core business
+                    priorities. The RESCO model eliminates the need for massive initial infrastructure expenditure.</p>
+            </div>
+            <!-- Card 2 -->
+            <div
+                class="bg-surface-container-lowest border border-outline-variant rounded p-8 hover:bg-surface-container-low transition-colors shadow-sm">
+                <div class="w-12 h-12 flex items-center justify-center mb-6 text-[#f9bd22]">
+                    <span class="material-symbols-outlined text-4xl" data-icon="trending_down">trending_down</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Lower Electricity Costs</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">Reduce grid dependency and stabilize
+                    long-term energy expenditures.</p>
+            </div>
+            <!-- Card 3 -->
+            <div
+                class="bg-surface-container-lowest border border-outline-variant rounded p-8 hover:bg-surface-container-low transition-colors shadow-sm">
+                <div class="w-12 h-12 flex items-center justify-center mb-6 text-[#f9bd22]">
+                    <span class="material-symbols-outlined text-4xl"
+                        data-icon="settings_suggest">settings_suggest</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Professional O&amp;M</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">Continuous monitoring and performance
+                    support managed by specialized engineering teams.</p>
+            </div>
+            <!-- Card 4 -->
+            <div
+                class="bg-surface-container-lowest border border-outline-variant rounded p-8 hover:bg-surface-container-low transition-colors shadow-sm">
+                <div class="w-12 h-12 flex items-center justify-center mb-6 text-[#f9bd22]">
+                    <span class="material-symbols-outlined text-4xl" data-icon="engineering">engineering</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Engineering Execution</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">Site assessment, design, and seamless
+                    integration handled by one unified team.</p>
+            </div>
+            <!-- Card 5 -->
+            <div
+                class="bg-surface-container-lowest border border-outline-variant rounded p-8 hover:bg-surface-container-low transition-colors shadow-sm">
+                <div class="w-12 h-12 flex items-center justify-center mb-6 text-[#f9bd22]">
+                    <span class="material-symbols-outlined text-4xl"
+                        data-icon="energy_savings_leaf">energy_savings_leaf</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-primary mb-2">Long-Term Planning</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">A structured, predictable approach to
+                    renewable energy adoption.</p>
+            </div>
+            <!-- Card 6 -->
+            <div
+                class="bg-surface-container-lowest border border-outline-variant rounded p-8 hover:bg-surface-container-low transition-colors shadow-sm flex flex-col items-center justify-center">
+                <div
+                    class="h-24 w-full bg-surface-container rounded border border-outline-variant flex items-center justify-center relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-10"
+                        style="background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #475399 10px, #475399 11px);">
+                    </div>
+                    <span
+                        class="font-technical-data text-technical-data text-primary z-10 px-2 font-semibold">PLANNING_MATRIX_ACTIVE</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Section 5: Eligibility Checker -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-[#1e2254] relative text-white">
+    <div class="max-w-container-max mx-auto relative z-10 flex flex-col lg:flex-row gap-16">
+        <!-- Left Column: Content & CTA -->
+        <div class="lg:w-1/3 flex flex-col justify-between">
+            <div>
+                <div class="accent-line"></div>
+                <h2 class="font-headline-lg text-headline-lg text-white mb-6">Could Your Facility Qualify for a RESCO
+                    Project?</h2>
+                <p class="font-body-md text-body-md text-white opacity-80 mb-8">Evaluate key criteria to determine if
+                    the Renewable Energy Service Company model aligns with your operational profile.</p>
+            </div>
+            <div class="bg-white/10 p-6 rounded border-l-4 border-[#f9bd22] mb-8">
+                <p class="font-label-sm text-label-sm text-white/70 uppercase mb-2 tracking-widest">Assessment Note</p>
+                <p class="font-body-md text-body-md text-white">RESCO suitability depends on specific energy consumption
+                    patterns, facility ownership status, technical feasibility, local regulations, credit profile, and
+                    contract terms.</p>
+            </div>
+            <button
+                class="bg-primary text-white font-label-md text-label-md py-4 px-8 rounded flex items-center justify-center hover:bg-primary/90 transition-colors w-full sm:w-auto self-start border border-primary-fixed">
+                Check My Facility
+                <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
+            </button>
+        </div>
+        <!-- Right Column: Checklist Cards -->
+        <div class="lg:w-2/3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <!-- Item 1 -->
+                <div
+                    class="bg-white/5 border border-white/10 p-5 rounded flex items-start group hover:bg-white/10 transition-colors">
+                    <div class="mt-1 mr-4 text-[#f9bd22]">
+                        <span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                    </div>
+                    <div>
+                        <h4 class="font-label-md text-label-md text-white mb-1">Substantial Monthly Bill</h4>
+                        <p class="font-body-md text-body-md text-white/70 text-sm">Consistent, high energy expenditures
+                            that warrant infrastructural intervention.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div
+                    class="bg-white/5 border border-white/10 p-5 rounded flex items-start group hover:bg-white/10 transition-colors">
+                    <div class="mt-1 mr-4 text-[#f9bd22]">
+                        <span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                    </div>
+                    <div>
+                        <h4 class="font-label-md text-label-md text-white mb-1">Daytime Consumption</h4>
+                        <p class="font-body-md text-body-md text-white/70 text-sm">Peak operational energy usage aligns
+                            with solar generation hours.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div
+                    class="bg-white/5 border border-white/10 p-5 rounded flex items-start group hover:bg-white/10 transition-colors">
+                    <div class="mt-1 mr-4 text-[#f9bd22]">
+                        <span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                    </div>
+                    <div>
+                        <h4 class="font-label-md text-label-md text-white mb-1">Available Space</h4>
+                        <p class="font-body-md text-body-md text-white/70 text-sm">Adequate unshaded rooftop or ground
+                            area for array deployment.</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div
+                    class="bg-white/5 border border-white/10 p-5 rounded flex items-start group hover:bg-white/10 transition-colors">
+                    <div class="mt-1 mr-4 text-[#f9bd22]">
+                        <span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                    </div>
+                    <div>
+                        <h4 class="font-label-md text-label-md text-white mb-1">Long-Term Operation</h4>
+                        <p class="font-body-md text-body-md text-white/70 text-sm">Facility intends to operate at the
+                            current location for 10+ years.</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div
+                    class="bg-white/5 border border-white/10 p-5 rounded flex items-start group hover:bg-white/10 transition-colors">
+                    <div class="mt-1 mr-4 text-[#f9bd22]">
+                        <span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                    </div>
+                    <div>
+                        <h4 class="font-label-md text-label-md text-white mb-1">Preserve Capital Preference</h4>
+                        <p class="font-body-md text-body-md text-white/70 text-sm">Strategic decision to avoid upfront
+                            CapEx for non-core infrastructure.</p>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div
+                    class="bg-white/5 border border-white/10 p-5 rounded flex items-start group hover:bg-white/10 transition-colors">
+                    <div class="mt-1 mr-4 text-[#f9bd22]">
+                        <span class="material-symbols-outlined" data-icon="check_circle">check_circle</span>
+                    </div>
+                    <div>
+                        <h4 class="font-label-md text-label-md text-white mb-1">Support Energy Agreement</h4>
+                        <p class="font-body-md text-body-md text-white/70 text-sm">Willingness to enter a structured
+                            Power Purchase Agreement (PPA).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Section 9: Mid-page CTA -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low relative">
+            <div class="max-w-container-max mx-auto text-center">
+                <div class="flex flex-col items-center justify-center mb-6">
+                    <div class="w-12 h-1 bg-tertiary mb-4"></div>
+                    <span class="font-label-md text-label-md text-primary tracking-widest uppercase">Take Action</span>
+                </div>
+                <h2
+                    class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-6">
+                    Find Out Whether RESCO Solar Fits Your Facility
+                </h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto mb-10">
+                    Share your monthly electricity usage and basic site details. Akuntha’s engineering team will review
+                    the opportunity to determine viability and projected savings.
+                </p>
+                <button
+                    class="bg-primary text-on-primary px-8 py-4 font-label-md text-label-md hover:bg-primary/90 transition-colors inline-flex items-center gap-2 uppercase tracking-wide font-bold">
+                    Start My Free Assessment
+                    <span class="material-symbols-outlined"
+                        style="font-variation-settings: 'FILL' 1;">arrow_forward</span>
+                </button>
+            </div>
+        </section>
+        <!-- Section 10: FAQ -->
+        <section
+            class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-y border-outline-variant/30">
+            <div class="max-w-container-max mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                    <div class="md:col-span-4 mb-10 md:mb-0 sticky top-24 self-start">
+                        <div class="w-12 h-1 bg-tertiary mb-4"></div>
+                        <span
+                            class="font-label-md text-label-md text-primary tracking-widest uppercase block mb-2">Knowledge
+                            Base</span>
+                        <h2
+                            class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-4">
+                            Frequently Asked Questions about RESCO Solar
+                        </h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">
+                            Technical and commercial details regarding our Renewable Energy Service Company model.
+                        </p>
+                    </div>
+                    <div class="md:col-span-8">
+                        <div class="border-t border-outline-variant">
+                            <!-- FAQ Item 1 -->
+                            <div class="faq-row py-6 transition-colors cursor-pointer group"
+                                onclick="this.classList.toggle('active')">
+                                <div class="flex justify-between items-center">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-primary text-lg group-hover:text-primary/80 transition-colors">
+                                        Who owns the solar plant?</h3>
+                                    <div class="relative w-6 h-6 flex items-center justify-center text-tertiary">
+                                        <span
+                                            class="material-symbols-outlined absolute transition-transform duration-300 plus-icon">add</span>
+                                        <span
+                                            class="material-symbols-outlined absolute transition-transform duration-300 scale-0 minus-icon">remove</span>
+                                    </div>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mt-4 hidden faq-content">
+                                    Akuntha Projects or our financing partners retain full ownership of the solar
+                                    installation throughout the duration of the Power Purchase Agreement (PPA). At the
+                                    end of the term, ownership may be transferred to your facility.
+                                </p>
+                            </div>
+                            <!-- FAQ Item 2 -->
+                            <div class="faq-row py-6 transition-colors cursor-pointer group"
+                                onclick="this.classList.toggle('active')">
+                                <div class="flex justify-between items-center">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-primary text-lg group-hover:text-primary/80 transition-colors">
+                                        How is payment handled?</h3>
+                                    <div class="relative w-6 h-6 flex items-center justify-center text-tertiary">
+                                        <span
+                                            class="material-symbols-outlined absolute transition-transform duration-300 plus-icon">add</span>
+                                        <span
+                                            class="material-symbols-outlined absolute transition-transform duration-300 scale-0 minus-icon">remove</span>
+                                    </div>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mt-4 hidden faq-content">
+                                    You pay only for the electricity generated by the system at a pre-agreed tariff
+                                    rate, which is typically significantly lower than grid rates. You will receive a
+                                    monthly invoice based on actual generation metered at your site.
+                                </p>
+                            </div>
+                            <!-- FAQ Item 3 -->
+                            <div class="faq-row py-6 transition-colors cursor-pointer group"
+                                onclick="this.classList.toggle('active')">
+                                <div class="flex justify-between items-center">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-primary text-lg group-hover:text-primary/80 transition-colors">
+                                        What is the minimum consumption required?</h3>
+                                    <div class="relative w-6 h-6 flex items-center justify-center text-tertiary">
+                                        <span
+                                            class="material-symbols-outlined absolute transition-transform duration-300 plus-icon">add</span>
+                                        <span
+                                            class="material-symbols-outlined absolute transition-transform duration-300 scale-0 minus-icon">remove</span>
+                                    </div>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mt-4 hidden faq-content">
+                                    The RESCO model is optimized for high-energy industrial and commercial facilities.
+                                    We typically require a minimum monthly consumption profile that supports at least a
+                                    500kWp system size to ensure economic viability for both parties.
+                                </p>
+                            </div>
+                            <!-- FAQ Item 4 -->
+                            <div class="faq-row py-6 transition-colors cursor-pointer group"
+                                onclick="this.classList.toggle('active')">
+                                <div class="flex justify-between items-center">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-primary text-lg group-hover:text-primary/80 transition-colors">
+                                        Are there lease arrangements involved?</h3>
+                                    <div class="relative w-6 h-6 flex items-center justify-center text-tertiary">
+                                        <span
+                                            class="material-symbols-outlined absolute transition-transform duration-300 plus-icon">add</span>
+                                        <span
+                                            class="material-symbols-outlined absolute transition-transform duration-300 scale-0 minus-icon">remove</span>
+                                    </div>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mt-4 hidden faq-content">
+                                    Yes, a nominal roof or land lease agreement is executed to allow us access and
+                                    rights to operate the plant on your premises for the duration of the PPA.
+                                </p>
+                            </div>
+                            <!-- FAQ Item 5 -->
+                            <div class="faq-row py-6 transition-colors cursor-pointer group"
+                                onclick="this.classList.toggle('active')">
+                                <div class="flex justify-between items-center">
+                                    <h3
+                                        class="font-headline-md text-headline-md text-primary text-lg group-hover:text-primary/80 transition-colors">
+                                        Who is responsible for maintenance?</h3>
+                                    <div class="relative w-6 h-6 flex items-center justify-center text-tertiary">
+                                        <span
+                                            class="material-symbols-outlined absolute transition-transform duration-300 plus-icon">add</span>
+                                        <span
+                                            class="material-symbols-outlined absolute transition-transform duration-300 scale-0 minus-icon">remove</span>
+                                    </div>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mt-4 hidden faq-content">
+                                    Akuntha Projects handles 100% of Operation &amp; Maintenance (O&amp;M). Our
+                                    engineering teams monitor performance, conduct regular cleaning, and perform
+                                    preventive and corrective maintenance at zero additional cost to you.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Section 11: Final Footer CTA -->
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop relative overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 bg-cover bg-center z-0"
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCxbRCuOW3VsSg1Byly42D-8Oaq5vJPR8BnVpMX8IRDh4YdfVBQmIrXm40eGbcfEsN0aH3-IMULECTp3BOfsc7R2jJdc9ohxhZ5njY0KARug24-pP35LqUzFgnUHc_DHhlYIGp0C7tieScSL9Bid-KDTiylV-JHHfX40BPhPDGn95QHVvZabTp_foYk6dfbZekEdokAQceLKTdsaG5pSdjjjs_zaUcZl8ZMooutUpQCOFPUh2zqfuuu5OEoGinaUuye2LWypCHuteyp')">
+                <div class="absolute inset-0 bg-primary/90 mix-blend-multiply"></div>
+            </div>
+            <div
+                class="max-w-container-max mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+                <div>
+                    <div class="w-12 h-1 bg-tertiary mb-4"></div>
+                    <span class="font-label-md text-label-md text-tertiary tracking-widest uppercase block mb-4">Get
+                        Started</span>
+                    <h2 class="font-display-lg text-display-lg text-white mb-6">
+                        Let’s Evaluate Your Solar Opportunity
+                    </h2>
+                    <p class="font-body-lg text-body-lg text-surface-container-high mb-8 max-w-lg">
+                        Complete the free assessment and our team will review your facility's energy profile to design a
+                        customized RESCO solution.
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4 md:justify-end">
+                    <button
+                        class="bg-tertiary text-on-tertiary-container px-6 py-4 font-label-md text-label-md hover:bg-tertiary/90 transition-colors uppercase tracking-wide font-bold">
+                        Get a Free RESCO Project Assessment
+                    </button>
+                    <button
+                        class="border-2 border-surface-container-high text-white bg-transparent px-6 py-4 font-label-md text-label-md hover:bg-white/10 transition-colors uppercase tracking-wide font-bold">
+                        Speak With Our Commercial Solar Team
+                    </button>
+                </div>
+            </div>
+        </section>
+    <!-- Footer Component -->
+    <footer
+        class="bg-surface-container-highest border-t border-outline-variant/30 py-16 px-margin-mobile md:px-margin-desktop relative z-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-container-max mx-auto">
+            <div class="md:col-span-1">
+                <span class="font-headline-md text-headline-md font-bold text-primary block mb-4">Akuntha
+                    Projects</span>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                    © 2024 Akuntha Projects. Engineering sustainable industrial infrastructure.
+                </p>
+            </div>
+            <div class="md:col-span-3 flex flex-wrap gap-8 md:justify-end items-start mt-8 md:mt-0">
+                <a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-200 uppercase tracking-wider"
+                    href="#">Privacy Policy</a>
+                <a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-200 uppercase tracking-wider"
+                    href="#">Terms of Service</a>
+                <a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-200 uppercase tracking-wider"
+                    href="#">Case Studies</a>
+                <a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-200 uppercase tracking-wider"
+                    href="#">Resource Center</a>
             </div>
         </div>
     </footer>
+    <script>
+        // Updated accordion logic for FAQ with new icons
+        document.querySelectorAll('.faq-row').forEach(item => {
+            item.addEventListener('click', () => {
+                const p = item.querySelector('.faq-content');
+                const plusIcon = item.querySelector('.plus-icon');
+                const minusIcon = item.querySelector('.minus-icon');
+
+                if (item.classList.contains('active')) {
+                    p.classList.remove('hidden');
+                    plusIcon.classList.add('scale-0');
+                    minusIcon.classList.remove('scale-0');
+                } else {
+                    p.classList.add('hidden');
+                    plusIcon.classList.remove('scale-0');
+                    minusIcon.classList.add('scale-0');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
