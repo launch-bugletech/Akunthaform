@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { IconFactory, IconWarehouse, IconSnowflake, IconBuilding, IconHospital, IconHotel, IconSchool, IconRetail, IconOther, IconArrowLeft, IconArrowRight, IconPlus, IconCheck } from './Icons.jsx';
+import FacilityMap from './FacilityMap.jsx';
 
 // 4-step Assessment Form — sticky right column of hero
 
@@ -42,6 +43,7 @@ function AssessmentForm() {
   const [data, setData] = useState({
     facility: '',
     state: '', city: '', pincode: '',
+    latitude: null, longitude: null, locationSource: '', locationLabel: '',
     bill: '', consumption: '', ownership: '',
     site: '', area: '', areaUnit: 'sq ft', notSureArea: false, objective: '',
     company: '', contact: '', mobile: '', email: '', contactTime: '',
@@ -165,6 +167,12 @@ function Step1({ data, set }) {
           />
         </div>
       </div>
+      <FacilityMap
+        pincode={data.pincode}
+        latitude={data.latitude}
+        longitude={data.longitude}
+        onLocationChange={(updates) => Object.entries(updates).forEach(([key, value]) => set(key, value))}
+      />
     </>
   );
 }
