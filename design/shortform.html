@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Solar Project Inquiry | Akuntha Projects</title>
+        <meta
+            name="description"
+            content="Solar project inquiry form for commercial, industrial and utility-scale projects."
+        />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Work+Sans:wght@600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+            rel="stylesheet"
+        />
+
+        <style>
+            :root {
+                --akuntha-navy: #1e2254;
+                --akuntha-navy-2: #272c68;
+                --akuntha-blue: #43487c;
+                --akuntha-yellow: #f3b51b;
+                --akuntha-yellow-soft: #fff4cf;
+                --accent: #cc452c;
+                --accent-soft: rgba(204, 69, 44, 0.12);
+                --accent-hover: #000422;
+                --text: #000422;
+                --muted: #7b8096;
+                --label: #5d6381;
+                --line: #dfe3ee;
+                --line-soft: #edf0f6;
+                --field: #f7f8fc;
+                --white: #ffffff;
+                --page: #f4f6fb;
+                --danger: #c63c3c;
+                --success: #21875b;
+                --shadow: 0 18px 50px rgba(30, 34, 84, 0.13);
+                --radius-card: 26px;
+                --radius-field: 14px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background:
+                    linear-gradient(
+                        rgba(30, 34, 84, 0.025) 1px,
+                        transparent 1px
+                    ),
+                    linear-gradient(
+                        90deg,
+                        rgba(30, 34, 84, 0.025) 1px,
+                        transparent 1px
+                    ),
+                    var(--page);
+                background-size: 42px 42px;
+                color: var(--text);
+                font-family: "Inter", sans-serif;
+                padding: 28px 16px;
+            }
+
+            button,
+            input,
+            select,
+            textarea {
+                font: inherit;
+            }
+
+            .form-shell {
+                width: min(100%, 980px);
+                margin: 0 auto;
+                background: var(--white);
+                border: 1px solid rgba(30, 34, 84, 0.1);
+                border-radius: var(--radius-card);
+                overflow: hidden;
+                box-shadow: var(--shadow);
+            }
+
+            .form-header {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 18px;
+                padding: 30px 36px;
+                background: var(--akuntha-navy);
+                color: var(--white);
+                overflow: hidden;
+            }
+
+            .form-header::after {
+                content: "";
+                position: absolute;
+                inset: 0;
+                pointer-events: none;
+                background:
+                    radial-gradient(
+                        circle at 85% 15%,
+                        rgba(204, 69, 44, 0.2),
+                        transparent 25%
+                    ),
+                    linear-gradient(
+                        120deg,
+                        transparent 50%,
+                        rgba(255, 255, 255, 0.035)
+                    );
+            }
+
+            .header-icon {
+                position: relative;
+                z-index: 1;
+                width: 56px;
+                height: 56px;
+                flex: 0 0 56px;
+                border-radius: 16px;
+                background: var(--white);
+                color: var(--accent);
+                display: grid;
+                place-items: center;
+            }
+
+            .header-icon .material-symbols-outlined {
+                font-size: 29px;
+                font-weight: 650;
+            }
+
+            .header-copy {
+                position: relative;
+                z-index: 1;
+            }
+
+            .header-copy h1 {
+                margin: 0;
+                font-family: "Work Sans", sans-serif;
+                font-size: clamp(21px, 3vw, 28px);
+                line-height: 1.15;
+                letter-spacing: -0.025em;
+            }
+
+            .header-copy p {
+                margin: 7px 0 0;
+                color: #cfd3ea;
+                font-size: 15px;
+                line-height: 1.55;
+            }
+
+            .yellow-rule {
+                height: 3px;
+                background: var(--accent);
+            }
+
+            .form-body {
+                padding: 36px;
+            }
+
+            .section-block + .section-block {
+                margin-top: 34px;
+            }
+
+            .section-title {
+                display: grid;
+                grid-template-columns: 34px auto 1fr;
+                align-items: center;
+                gap: 12px;
+                margin-bottom: 24px;
+            }
+
+            .section-title-icon {
+                width: 30px;
+                height: 30px;
+                border-radius: 9px;
+                display: grid;
+                place-items: center;
+                color: var(--accent);
+                background: var(--accent-soft);
+            }
+
+            .section-title-icon .material-symbols-outlined {
+                font-size: 19px;
+            }
+
+            .section-title h2 {
+                margin: 0;
+                font-size: 13px;
+                letter-spacing: 0.11em;
+                text-transform: uppercase;
+                color: #8d95b1;
+                font-weight: 700;
+                white-space: nowrap;
+            }
+
+            .section-title-line {
+                height: 1px;
+                background: var(--line-soft);
+            }
+
+            .grid-2 {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 22px 24px;
+            }
+
+            .field.full {
+                grid-column: 1 / -1;
+            }
+
+            .field label {
+                display: flex;
+                align-items: center;
+                gap: 7px;
+                margin-bottom: 9px;
+                color: var(--label);
+                font-size: 13px;
+                line-height: 1.35;
+                font-weight: 700;
+                letter-spacing: 0.085em;
+                text-transform: uppercase;
+            }
+
+            .field label .material-symbols-outlined {
+                color: var(--accent);
+                font-size: 18px;
+            }
+
+            .required {
+                color: var(--accent);
+            }
+
+            .control-wrap {
+                position: relative;
+            }
+
+            input,
+            select,
+            textarea {
+                width: 100%;
+                border: 1px solid var(--line);
+                border-radius: var(--radius-field);
+                background: var(--field);
+                color: var(--text);
+                outline: none;
+                transition:
+                    border-color 0.2s ease,
+                    box-shadow 0.2s ease,
+                    background 0.2s ease;
+            }
+
+            input,
+            select {
+                height: 58px;
+                padding: 0 18px;
+            }
+
+            input[type="file"] {
+                display: flex;
+                align-items: center;
+                padding: 0 8px;
+                cursor: pointer;
+                color: var(--muted);
+                font-size: 14px;
+            }
+
+            input[type="file"]::file-selector-button {
+                height: 40px;
+                margin-right: 14px;
+                padding: 0 18px;
+                border: 0;
+                border-radius: 10px;
+                background: var(--accent);
+                color: var(--white);
+                font-weight: 700;
+                font-size: 13px;
+                letter-spacing: 0.02em;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: background 0.2s ease;
+            }
+
+            input[type="file"]::file-selector-button:hover {
+                background: var(--accent-hover);
+            }
+
+            textarea {
+                min-height: 130px;
+                resize: vertical;
+                padding: 17px 18px;
+                line-height: 1.55;
+            }
+
+            input::placeholder,
+            textarea::placeholder {
+                color: #9ba5c4;
+                opacity: 1;
+            }
+
+            input:focus,
+            select:focus,
+            textarea:focus {
+                border-color: var(--akuntha-blue);
+                box-shadow: 0 0 0 4px rgba(67, 72, 124, 0.1);
+                background: var(--white);
+            }
+
+            select {
+                appearance: none;
+                background-image:
+                    linear-gradient(45deg, transparent 50%, #7f88a8 50%),
+                    linear-gradient(135deg, #7f88a8 50%, transparent 50%);
+                background-position:
+                    calc(100% - 22px) 25px,
+                    calc(100% - 16px) 25px;
+                background-size:
+                    6px 6px,
+                    6px 6px;
+                background-repeat: no-repeat;
+                padding-right: 48px;
+            }
+
+            .helper {
+                margin: 8px 0 0;
+                color: #9199b7;
+                font-size: 12.5px;
+                line-height: 1.5;
+            }
+
+            .error-message {
+                display: none;
+                margin-top: 7px;
+                color: var(--danger);
+                font-size: 12.5px;
+                line-height: 1.4;
+            }
+
+            .field.invalid input,
+            .field.invalid select,
+            .field.invalid textarea {
+                border-color: var(--danger);
+                background: #fffafa;
+            }
+
+            .field.invalid .error-message {
+                display: block;
+            }
+
+            .consent-field {
+                margin-top: 30px;
+                padding-top: 22px;
+                border-top: 1px solid var(--line-soft);
+            }
+
+            .consent-field .consent-label {
+                display: flex;
+                align-items: flex-start;
+                gap: 11px;
+                cursor: pointer;
+                text-transform: none;
+                letter-spacing: normal;
+                font-weight: 500;
+                color: var(--muted);
+                font-size: 13.5px;
+                line-height: 1.55;
+            }
+
+            .consent-label input[type="checkbox"] {
+                width: 19px;
+                height: 19px;
+                flex: 0 0 19px;
+                margin-top: 2px;
+                accent-color: var(--akuntha-blue);
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .consent-field.invalid .consent-label {
+                color: var(--danger);
+            }
+
+            .consent-field.invalid .consent-label input[type="checkbox"] {
+                outline: 2px solid var(--danger);
+                outline-offset: 2px;
+            }
+
+            .consent-field .error-message {
+                margin-left: 30px;
+            }
+
+            .footer-area {
+                margin-top: 34px;
+                padding-top: 28px;
+                border-top: 1px solid var(--line-soft);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 24px;
+            }
+
+            .privacy-note {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                color: #929bb9;
+                max-width: 450px;
+                font-size: 12.5px;
+                line-height: 1.55;
+            }
+
+            .privacy-note .material-symbols-outlined {
+                color: #c7cde0;
+                font-size: 20px;
+                margin-top: 1px;
+            }
+
+            .submit-btn {
+                min-width: 228px;
+                min-height: 58px;
+                border: 0;
+                border-radius: 14px;
+                background: var(--accent);
+                color: var(--white);
+                font-weight: 800;
+                letter-spacing: 0.025em;
+                text-transform: uppercase;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                gap: 11px;
+                cursor: pointer;
+                transition:
+                    transform 0.2s ease,
+                    background 0.2s ease,
+                    box-shadow 0.2s ease;
+            }
+
+            .submit-btn:hover {
+                background: var(--accent-hover);
+                transform: translateY(-1px);
+                box-shadow: 0 10px 22px rgba(0, 4, 34, 0.25);
+            }
+
+            .submit-btn:active {
+                transform: translateY(0);
+            }
+            .submit-btn .material-symbols-outlined {
+                font-size: 21px;
+            }
+
+            .status {
+                display: none;
+                margin-top: 18px;
+                padding: 14px 16px;
+                border-radius: 12px;
+                font-size: 13px;
+                line-height: 1.5;
+            }
+
+            .status.success {
+                display: block;
+                color: #176443;
+                background: #eefaf4;
+                border: 1px solid #bfe7d2;
+            }
+
+            .status.error {
+                display: block;
+                color: #9f2f2f;
+                background: #fff4f4;
+                border: 1px solid #efc5c5;
+            }
+
+            @media (max-width: 760px) {
+                body {
+                    padding: 14px 10px;
+                }
+                .form-header {
+                    padding: 24px 22px;
+                    align-items: flex-start;
+                }
+                .header-icon {
+                    width: 50px;
+                    height: 50px;
+                    flex-basis: 50px;
+                    border-radius: 14px;
+                }
+                .form-body {
+                    padding: 26px 20px;
+                }
+                .grid-2 {
+                    grid-template-columns: 1fr;
+                    gap: 19px;
+                }
+                .field.full {
+                    grid-column: auto;
+                }
+                .footer-area {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+                .submit-btn {
+                    width: 100%;
+                    min-width: 0;
+                }
+            }
+
+            @media (max-width: 460px) {
+                .form-header {
+                    gap: 13px;
+                }
+                .header-copy p {
+                    font-size: 13.5px;
+                }
+                .section-title {
+                    grid-template-columns: 30px auto 1fr;
+                    gap: 9px;
+                }
+                .section-title h2 {
+                    font-size: 11.5px;
+                    letter-spacing: 0.08em;
+                    white-space: normal;
+                }
+                input,
+                select {
+                    height: 54px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <main class="form-shell">
+            <header class="form-header">
+                <div class="header-icon" aria-hidden="true">
+                    <span class="material-symbols-outlined">assignment</span>
+                </div>
+                <div class="header-copy">
+                    <h1>Get a Free RESCO Project Assessment</h1>
+                    <p>
+                        Answer a few questions about your facility and
+                        electricity use. Our engineering team will assess
+                        whether your site may be suitable for a RESCO project.
+                    </p>
+                </div>
+            </header>
+            <div class="yellow-rule"></div>
+
+            <!-- Replace action URL with your CRM, WordPress endpoint, Formspree, webhook, or backend API. -->
+            <form
+                id="solarInquiryForm"
+                class="form-body"
+                action="#"
+                method="post"
+                novalidate
+            >
+                <section
+                    class="section-block"
+                    aria-labelledby="personal-info-heading"
+                >
+                    <div class="section-title">
+                        <div class="section-title-icon">
+                            <span class="material-symbols-outlined"
+                                >person</span
+                            >
+                        </div>
+                        <h2 id="personal-info-heading">Personal Information</h2>
+                        <div class="section-title-line"></div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="field" data-required>
+                            <label for="full_name"
+                                ><span class="material-symbols-outlined"
+                                    >person</span
+                                >Full Name
+                                <span class="required">*</span></label
+                            >
+                            <input
+                                id="full_name"
+                                name="full_name"
+                                type="text"
+                                autocomplete="name"
+                                placeholder="e.g. John Doe"
+                                required
+                            />
+                            <div class="error-message">
+                                Please enter your full name.
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="company_name"
+                                ><span class="material-symbols-outlined"
+                                    >apartment</span
+                                >Company Name</label
+                            >
+                            <input
+                                id="company_name"
+                                name="company_name"
+                                type="text"
+                                autocomplete="organization"
+                                placeholder="e.g. ABC Industries Pvt Ltd"
+                            />
+                        </div>
+
+                        <div class="field" data-required data-phone>
+                            <label for="phone"
+                                ><span class="material-symbols-outlined"
+                                    >call</span
+                                >Phone Number
+                                <span class="required">*</span></label
+                            >
+                            <input
+                                id="phone"
+                                name="phone"
+                                type="tel"
+                                inputmode="tel"
+                                autocomplete="tel"
+                                placeholder="e.g. +91 98765 43210"
+                                required
+                            />
+                            <div class="error-message">
+                                Enter a valid 10-digit Indian mobile number.
+                            </div>
+                        </div>
+
+                        <div class="field" data-required data-email>
+                            <label for="email"
+                                ><span class="material-symbols-outlined"
+                                    >mail</span
+                                >Email Address
+                                <span class="required">*</span></label
+                            >
+                            <input
+                                id="email"
+                                name="email"
+                                type="email"
+                                autocomplete="email"
+                                placeholder="e.g. john.doe@company.com"
+                                required
+                            />
+                            <div class="error-message">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="project_location"
+                                ><span class="material-symbols-outlined"
+                                    >location_on</span
+                                >Project Location</label
+                            >
+                            <input
+                                id="project_location"
+                                name="project_location"
+                                type="text"
+                                autocomplete="address-level2"
+                                placeholder="e.g. Ahmedabad, Gujarat (project site)"
+                            />
+                            <p class="helper">
+                                Enter the city or site where the project will be
+                                located — not your office address.
+                            </p>
+                        </div>
+
+                        <div class="field" data-required data-pincode>
+                            <label for="pincode"
+                                ><span class="material-symbols-outlined"
+                                    >pin_drop</span
+                                >Site Pincode
+                                <span class="required">*</span></label
+                            >
+                            <input
+                                id="pincode"
+                                name="pincode"
+                                type="text"
+                                inputmode="numeric"
+                                maxlength="6"
+                                placeholder="e.g. 382421"
+                                required
+                            />
+                            <div class="error-message">
+                                Please enter a valid 6-digit pincode.
+                            </div>
+                            <p class="helper">
+                                Used to check serviceability and route your
+                                enquiry to the right regional team.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section
+                    class="section-block"
+                    aria-labelledby="project-details-heading"
+                >
+                    <div class="section-title">
+                        <div class="section-title-icon">
+                            <span class="material-symbols-outlined">bolt</span>
+                        </div>
+                        <h2 id="project-details-heading">
+                            Project &amp; Electricity Details
+                        </h2>
+                        <div class="section-title-line"></div>
+                    </div>
+
+                    <div class="grid-2">
+                        <div class="field">
+                            <label for="facility_type"
+                                ><span class="material-symbols-outlined"
+                                    >factory</span
+                                >What Best Describes Your Facility?</label
+                            >
+                            <select id="facility_type" name="facility_type">
+                                <option value="">Select facility type</option>
+                                <option>Factory</option>
+                                <option>Warehouse</option>
+                                <option>Cold Storage</option>
+                                <option>Commercial Building</option>
+                                <option>Hospital</option>
+                                <option>Hotel</option>
+                                <option>Educational Institution</option>
+                                <option>Retail / Shopping Complex</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="ownership"
+                                ><span class="material-symbols-outlined"
+                                    >home_work</span
+                                >Do You Own the Property?</label
+                            >
+                            <select id="ownership" name="ownership">
+                                <option value="">Select an option</option>
+                                <option>Yes</option>
+                                <option>No</option>
+                                <option>Leased</option>
+                                <option>Partially</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="install_location"
+                                ><span class="material-symbols-outlined"
+                                    >solar_power</span
+                                >Where Can Solar Potentially Be
+                                Installed?</label
+                            >
+                            <select
+                                id="install_location"
+                                name="install_location"
+                            >
+                                <option value="">Select an option</option>
+                                <option>Rooftop</option>
+                                <option>Ground</option>
+                                <option>Both</option>
+                                <option>Not Sure</option>
+                            </select>
+                        </div>
+
+                        <div class="field" data-required>
+                            <label for="monthly_bill"
+                                ><span class="material-symbols-outlined"
+                                    >payments</span
+                                >Approx. Monthly Electricity Bill
+                                <span class="required">*</span></label
+                            >
+                            <select
+                                id="monthly_bill"
+                                name="monthly_bill"
+                                required
+                            >
+                                <option value="">Select a range</option>
+                                <option>Below ₹50,000</option>
+                                <option>₹50,000 – ₹1 Lakh</option>
+                                <option>₹1 – ₹3 Lakh</option>
+                                <option>₹3 – ₹5 Lakh</option>
+                                <option>Above ₹5 Lakh</option>
+                                <option>Not Sure</option>
+                            </select>
+                            <div class="error-message">
+                                Please select your approximate monthly bill.
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="monthly_units"
+                                ><span class="material-symbols-outlined"
+                                    >bolt</span
+                                >Monthly Electricity Units (kWh)</label
+                            >
+                            <input
+                                id="monthly_units"
+                                name="monthly_units"
+                                type="number"
+                                min="0"
+                                placeholder="e.g. 12000"
+                            />
+                            <p class="helper">
+                                Optional — usually printed on your latest
+                                electricity bill. Improves quote accuracy.
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <label for="discom"
+                                ><span class="material-symbols-outlined"
+                                    >electrical_services</span
+                                >Electricity Provider (DISCOM)</label
+                            >
+                            <select id="discom" name="discom">
+                                <option value="">Select provider</option>
+                                <option>UGVCL</option>
+                                <option>DGVCL</option>
+                                <option>MGVCL</option>
+                                <option>PGVCL</option>
+                                <option>Torrent Power</option>
+                                <option>Other State DISCOM</option>
+                                <option>Not Sure</option>
+                            </select>
+                            <p class="helper">
+                                Electricity tariffs and subsidy rules differ by
+                                provider and state.
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <label for="consumer_number"
+                                ><span class="material-symbols-outlined"
+                                    >confirmation_number</span
+                                >Consumer Number</label
+                            >
+                            <input
+                                id="consumer_number"
+                                name="consumer_number"
+                                type="text"
+                                placeholder="As shown on your electricity bill"
+                            />
+                            <p class="helper">
+                                Optional at this stage — helps with subsidy and
+                                net-metering steps later.
+                            </p>
+                        </div>
+
+                        <div class="field">
+                            <label for="bill_upload"
+                                ><span class="material-symbols-outlined"
+                                    >upload_file</span
+                                >Upload Electricity Bill</label
+                            >
+                            <input
+                                id="bill_upload"
+                                name="bill_upload"
+                                type="file"
+                                accept=".pdf,.jpg,.jpeg,.png"
+                            />
+                            <p class="helper">
+                                Optional — PDF, JPG or PNG, max 10MB. Helps us
+                                verify units, tariff and sanctioned load.
+                            </p>
+                        </div>
+
+                        <div class="field full">
+                            <label for="capacity"
+                                ><span class="material-symbols-outlined"
+                                    >electric_bolt</span
+                                >Required Capacity</label
+                            >
+                            <input
+                                id="capacity"
+                                name="required_capacity"
+                                type="text"
+                                placeholder="e.g. 10 MW utility-scale"
+                            />
+                            <p class="helper">
+                                Typical project range: 300 kW to 500 MW+
+                            </p>
+                        </div>
+
+                        <div class="field full">
+                            <label for="source"
+                                ><span class="material-symbols-outlined"
+                                    >campaign</span
+                                >How Did You Hear About Us?</label
+                            >
+                            <select id="source" name="lead_source">
+                                <option value="">Select an option</option>
+                                <option>Referral / Friend</option>
+                                <option>Google Search</option>
+                                <option>LinkedIn</option>
+                                <option>Social Media</option>
+                                <option>Industry Event / Exhibition</option>
+                                <option>
+                                    Existing Akuntha Client / Partner
+                                </option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="field full">
+                            <label for="message"
+                                ><span class="material-symbols-outlined"
+                                    >chat_bubble</span
+                                >Additional Message</label
+                            >
+                            <textarea
+                                id="message"
+                                name="message"
+                                placeholder="Site details, load requirements, target timeline, or any specific questions..."
+                            ></textarea>
+                        </div>
+                    </div>
+                </section>
+
+                <div
+                    class="field full consent-field"
+                    data-required
+                    data-consent
+                >
+                    <label class="consent-label" for="consent">
+                        <input
+                            id="consent"
+                            name="consent"
+                            type="checkbox"
+                            required
+                        />
+                        <span
+                            >I agree to be contacted by Akuntha Projects via
+                            phone, SMS, WhatsApp, or email regarding this
+                            enquiry, and for my details to be used only to
+                            prepare my project assessment.
+                            <span class="required">*</span></span
+                        >
+                    </label>
+                    <div class="error-message">
+                        Please accept the consent statement to continue.
+                    </div>
+                </div>
+
+                <div class="footer-area">
+                    <div class="privacy-note">
+                        <span class="material-symbols-outlined">shield</span>
+                        <span
+                            >Your information is confidential and used only to
+                            review your project inquiry and contact you about
+                            relevant Akuntha solar solutions.</span
+                        >
+                    </div>
+
+                    <button class="submit-btn" type="submit">
+                        <span class="material-symbols-outlined">send</span>
+                        Submit Inquiry
+                    </button>
+                </div>
+
+                <div
+                    id="formStatus"
+                    class="status"
+                    role="status"
+                    aria-live="polite"
+                ></div>
+            </form>
+        </main>
+
+        <script>
+            const form = document.getElementById("solarInquiryForm");
+            const statusBox = document.getElementById("formStatus");
+
+            const normalisePhone = (value) => {
+                let digits = value.replace(/\D/g, "");
+                if (digits.length === 12 && digits.startsWith("91"))
+                    digits = digits.slice(2);
+                return digits;
+            };
+
+            const validateField = (field) => {
+                const input = field.querySelector("input, select, textarea");
+                if (!input) return true;
+
+                let valid = true;
+
+                if (input.type === "checkbox") {
+                    valid = input.checked;
+                    field.classList.toggle("invalid", !valid);
+                    input.setAttribute("aria-invalid", String(!valid));
+                    return valid;
+                }
+
+                const value = input.value.trim();
+
+                if (field.hasAttribute("data-required") && !value)
+                    valid = false;
+
+                if (valid && field.hasAttribute("data-phone")) {
+                    valid = /^[6-9]\d{9}$/.test(normalisePhone(value));
+                }
+
+                if (valid && field.hasAttribute("data-email")) {
+                    valid = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(value);
+                }
+
+                if (valid && field.hasAttribute("data-pincode")) {
+                    valid = /^\d{6}$/.test(value);
+                }
+
+                field.classList.toggle("invalid", !valid);
+                input.setAttribute("aria-invalid", String(!valid));
+                return valid;
+            };
+
+            form.querySelectorAll(
+                ".field[data-required], .field[data-phone], .field[data-email], .field[data-pincode], .field[data-consent]",
+            ).forEach((field) => {
+                const input = field.querySelector("input, select, textarea");
+                const events =
+                    input.type === "checkbox"
+                        ? ["change"]
+                        : ["input", "blur", "change"];
+                events.forEach((eventName) => {
+                    input.addEventListener(eventName, () =>
+                        validateField(field),
+                    );
+                });
+            });
+
+            form.addEventListener("submit", async (event) => {
+                event.preventDefault();
+                statusBox.className = "status";
+                statusBox.textContent = "";
+
+                const fields = [
+                    ...form.querySelectorAll(
+                        ".field[data-required], .field[data-phone], .field[data-email], .field[data-pincode], .field[data-consent]",
+                    ),
+                ];
+                const isValid = fields.map(validateField).every(Boolean);
+
+                if (!isValid) {
+                    statusBox.className = "status error";
+                    statusBox.textContent =
+                        "Please correct the highlighted fields before submitting your inquiry.";
+                    form.querySelector(
+                        ".field.invalid input, .field.invalid select, .field.invalid textarea",
+                    )?.focus();
+                    return;
+                }
+
+                /*
+        INTEGRATION NOTE:
+        Replace this demo success block with fetch() to your WordPress REST endpoint,
+        CRM webhook, Formspree endpoint, n8n webhook, or custom backend.
+
+        Example:
+        const response = await fetch('YOUR-ENDPOINT', {
+          method: 'POST',
+          body: new FormData(form)
+        });
+        if (!response.ok) throw new Error('Submission failed');
+      */
+
+                statusBox.className = "status success";
+                statusBox.textContent =
+                    "Thank you. Your solar project inquiry has been recorded. The Akuntha team will contact you within 24 hours.";
+                form.reset();
+                statusBox.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest",
+                });
+            });
+        </script>
+    </body>
+</html>
